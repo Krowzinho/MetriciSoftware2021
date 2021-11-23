@@ -1,4 +1,3 @@
-from writer import Writer
 
 class camera_manager:
     def __init__(self, lista_camere):

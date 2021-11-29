@@ -14,3 +14,15 @@ class Apartament:
     def set_disponibilitate(self, valoare):
         self.disponibilitate_ap = valoare
 
+    def get_disponibilitate(self):
+        return self.disponibilitate_ap
+
+    def get_capacitate(self):
+        return self.capacitate
+
+    def set_capacitate(self,new_capacitate):
+        self.capacitate = new_capacitate
+
+    def get_id(self):
+        return self.id_ap
+

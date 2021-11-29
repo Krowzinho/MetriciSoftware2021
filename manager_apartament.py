@@ -7,7 +7,7 @@ class apartament_manager:
         output = ""
         for apartament in self.lista_apartamente:
             output += "Apartamentul are o suprafata de {} si costa {} lei\n".format(apartament.suprafata_ap, apartament.pret_ap)
-            if apartament.disponibilitate_ap:
+            if apartament.get_disponibilitate():
                 output += "Este Disponibil\n"
             else:
                 output += "Nu este disponibil\n"

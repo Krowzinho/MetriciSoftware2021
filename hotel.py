@@ -32,3 +32,42 @@ class Hotel:
             if id == apartament.id_ap:
                 apartament.set_disponibilitate(False)
         print(self.apartamente.printare_apartamente())
+
+    def camera_inchiriata(self, id):
+        for camera in self.camere.lista_camere:
+            if id == camera.get_id():
+                camera.set_disponibilitate(False)
+        print(self.camere.printare_camere())
+
+    def verificare_certificat(self, persoana, id):
+        if persoana.get_certificat_verde():
+            return True
+
+        for camera in self.camere.lista_camere:
+            if camera.get_id() == id:
+                if persoana.get_certificat_verde() == camera.get_certificat_verde() and camera.get_disponibilitate():
+                    return True
+
+        for apartament in self.apartamente.lista_apartamente:
+            if apartament.get_id() == id:
+                if persoana.get_certificat_verde() == apartament.get_certificat_verde() and apartament.get_disponibilitate():
+                    return True
+
+        return False
+
+    def camere_fara_certificat(self):
+        return [camera for camera in self.camere.lista_camere if camera.get_certificat_verde() == False]
+
+    def apartamente_fara_certificat(self):
+        return [ap for ap in self.apartamente.lista_apartamente if ap.get_certificat_verde() == False]
+
+    def camera_eliberata(self, id):
+        for camera in self.camere.lista_camere:
+            if camera.get_id() == id:
+                camera.set_disponibilitate(True)
+        print(self.camere.printare_camere())
+
+    def apartament_eliberat(self, id):
+        for apartament in self.apartamente.lista_apartamente:
+            if apartament.get_id() == id:
+                apartament.set_disponibilitate(True)

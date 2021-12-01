@@ -9,6 +9,9 @@ class Persoana:
         self.checkout = False
         self.locatie = None
 
+    def get_nume(self):
+        return self.nume
+
     def get_certificat_verde(self):
         return self.certificat_verde
 
@@ -17,6 +20,9 @@ class Persoana:
 
     def get_checkin(self):
         return self.checkin
+
+    def get_info(self):
+        return f'{self.prenume} {self.nume} cu CNP-ul {self.cnp} are un buget de {self.buget}'
 
     def inchiriere_apartament(self, hotel, pret_ap):
         #if self.get_checkin():

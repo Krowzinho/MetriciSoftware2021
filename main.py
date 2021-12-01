@@ -5,9 +5,9 @@ from apartament import Apartament
 from manager_apartament import apartament_manager
 from persoana import Persoana
 from printer import PDF_Printer
+from grafica import Grafica
 
 if __name__ == '__main__':
-
     #Lista hoteluri
     h1 = Hotel ("Royal Bay Resort-All Inclusive"," Bulgaria [tara]"," 3 [camere] "," 3 [apartamente] "," Borislav [nume manager]"," +359 700 18 411 [nr telefon]")
     h2 = Hotel("Hotel Rusu", " Romania [tara]", " 6 [camere]", " 3 [apartamente]", " Radoi [nume manager]", " +40 724 233 820 [nr telefon]")
@@ -84,3 +84,11 @@ if __name__ == '__main__':
     printer.scrie_PDF("PRET APARTAMENT/CAMERA INCHIRIATA:")
 
     printer.printeaza_PDF()
+
+
+    lista_persoane = [pers1, pers2, pers3, pers4, pers5, pers6]
+    lista_hoteluri = [h1, h2, h3]
+    manager_camere = camera_manager([c1, c2, c3, c4, c5, c6, c7, c8, c9])
+    manager_apartament = apartament_manager([ap1, ap2, ap3, ap4])
+
+    graphics = Grafica(lista_persoane)

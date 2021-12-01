@@ -6,11 +6,11 @@ class camera_manager:
     def printare_camere(self):
         output = ""
         for camera in self.lista_camere:
-            output += "Camera are o suprafata de {} si costa {} lei\n".format(camera.suprafata, camera.pret)
+            output += "\nCamera are o suprafata de {} mp\u00b2 si costa {} lei.\n".format(camera.suprafata, camera.pret)
             if camera.get_disponibilitate():
                 output += "Este disponibila!\n"
             else:
-                output += "Nu este disponibila\n"
+                output += "Nu este disponibila!\n"
         return output
 
     def sortare_camere_dupa_pret(self):

@@ -21,11 +21,11 @@ class Hotel:
 
     def adaugare_camere(self, manager_camere):
         self.camere = manager_camere
-        self.file_writer.write("Hotelul {} are urmatoarele camere {}\n".format(self.nume, self.camere.printare_camere()))
+        self.file_writer.write("Hotelul [{}] are urmatoarele camere: {}\n".format(self.nume, self.camere.printare_camere()))
 
     def adaugare_ap(self, manager_ap):
         self.apartamente = manager_ap
-        self.file_writer.write("Hotelul {} are urmatoarele apartamente {}\n".format(self.nume, self.apartamente.printare_apartamente()))
+        self.file_writer.write("Hotelul [{}] are urmatoarele apartamente: {}\n".format(self.nume, self.apartamente.printare_apartamente()))
 
     def apartament_inchiriat(self, id):
         for apartament in self.apartamente.lista_apartamente:

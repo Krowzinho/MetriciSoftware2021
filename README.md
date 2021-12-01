@@ -47,7 +47,7 @@ Get si Set adaugare in fisierele "**apartament.py**", "**camera.py**", "**persoa
 
 Functie de inchiriere camera si de checkout in fisierul "**main.py**"
   
-***Incercarea de exporta datele dintr-un fisier txt intr-un fisier PDF***
+***Incercarea de a exporta datele dintr-un fisier txt intr-un fisier PDF***
 
 In fisierul "**printer.py**" am setat parametrii celulelor din fisierul PDF.
 

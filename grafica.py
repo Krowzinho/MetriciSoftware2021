@@ -2,7 +2,6 @@ import tkinter
 from tkinter import *
 from persoana import Persoana
 
-
 class Grafica:
     def __init__(self, lista_persoane):
         # Inits
@@ -19,7 +18,7 @@ class Grafica:
 
     def creaza_grafica(self):
         self.root = Tk()
-        self.root.title("MSIC")
+        self.root.title("GUI MSIC")
         self.root.geometry("720x480")
 
     def porneste_grafica(self):
@@ -37,7 +36,7 @@ class ButonAdaugare:
         self.creaza_buton_adaugare()
 
     def creaza_buton_adaugare(self):
-        self.btn_adaugare = Button(self.root, text="Adauga", command=self.buton_adaugare_apasat)
+        self.btn_adaugare = Button(self.root, text="Adauga persoana", command=self.buton_adaugare_apasat)
         self.btn_adaugare.grid(column=0, row=0)
 
     def buton_adaugare_apasat(self):
@@ -45,16 +44,16 @@ class ButonAdaugare:
 
     def creaza_fereastra_adaugare(self):
         self.fereastra_adaugare = Toplevel(self.root)
-        self.fereastra_adaugare.geometry("300x300")
-        self.fereastra_adaugare.title("Adauga persoana")
+        self.fereastra_adaugare.geometry("400x300")
+        self.fereastra_adaugare.title("Fereastra adaugare persoana")
 
-        self.nume_input = Text(self.fereastra_adaugare, width = 10, height = 1)
-        self.nume_input.grid(column = 1, row=0)
-        self.prenume_input = Text(self.fereastra_adaugare, width = 10, height = 1)
+        self.nume_input = Text(self.fereastra_adaugare, width = 20, height = 1)
+        self.nume_input.grid (row=0, column = 1)
+        self.prenume_input = Text(self.fereastra_adaugare, width = 20, height = 1)
         self.prenume_input.grid(row=1, column=1)
-        self.cnp_input = Text(self.fereastra_adaugare, width = 10, height = 1)
+        self.cnp_input = Text(self.fereastra_adaugare, width = 20, height = 1)
         self.cnp_input.grid(row=2, column=1)
-        self.buget_input = Text(self.fereastra_adaugare, width = 10, height = 1)
+        self.buget_input = Text(self.fereastra_adaugare, width = 20, height = 1)
         self.buget_input.grid(row=3, column=1)
 
         label_nume = Label(self.fereastra_adaugare, text="Nume: ")
@@ -75,7 +74,7 @@ class ButonAdaugare:
         in_cnp = self.cnp_input.get("1.0", END)
         in_buget = self.buget_input.get("1.0", END)
 
-        self.listbox.adauga_persoana(Persoana(nume=in_nume, prenume=in_prenume, cnp=in_cnp, buget=in_buget, certificat_verde=True))
+        self.listbox.adauga_persoana(Persoana(nume=in_nume.strip(), prenume=in_prenume.strip(), cnp=in_cnp.strip(), buget=in_buget.strip(), certificat_verde=True))
         self.fereastra_adaugare.destroy()
 
 
@@ -90,7 +89,7 @@ class ButonStergere:
         self.creaza_buton_stergere()
 
     def creaza_buton_stergere(self):
-        self.btn_stergere = Button(self.root, text="Sterge", command=self.buton_stergere_apasat)
+        self.btn_stergere = Button(self.root, text="Sterge persoana", command=self.buton_stergere_apasat)
         self.btn_stergere.grid(column=0, row=1)
 
     def buton_stergere_apasat(self):
@@ -126,7 +125,7 @@ class ListBox:
         return  self.list_box.get(self.list_box.curselection())
 
     def creaza_text_info(self):
-        self.text_box = Text(self.root, height=10, width=20)
+        self.text_box = Text(self.root, height=10, width=70)
         self.text_box.grid(row=2, column=1)
 
     def seteaza_text(self, text):

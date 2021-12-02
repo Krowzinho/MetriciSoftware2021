@@ -22,7 +22,7 @@ class Persoana:
         return self.checkin
 
     def get_info(self):
-        return f'{self.prenume} {self.nume} cu CNP-ul {self.cnp} are un buget de {self.buget}'
+        return f'{self.prenume} {self.nume} cu CNP-ul {self.cnp} are un buget de {self.buget} lei.'
 
     def inchiriere_apartament(self, hotel, pret_ap):
         #if self.get_checkin():

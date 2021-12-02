@@ -55,3 +55,28 @@ In fisierul "**printer.py**" am setat parametrii celulelor din fisierul PDF.
 ## "fifth" - Putine schimbari cosmetice legate de afisarea informatiilor din fisier
 
 ## "sixth" - Crearea fisierului README.md
+
+## "seventh" - Refactorizare cod si adaugarea unor functii
+
+-Functie care ne afiseaza numele persoanei  
+
+-Functie care ne va afisa informatiile noastre in viitorul listbox (Version:"eighth")  
+
+## "eighth" - Crearea interfetei grafice
+
+Refacere proiect (modificarea din greseala a README-ului din WEB app m-a fortat sa refac path-ul aplicatiei)  
+
+Adaugarea fisierelor TXT cu informatiile hotelurilor, disponibilitatea camerelor/apartamentelor plus pretul lor   
+
+Crearea fisierului "**grafica.py**" si a claselor:  
+
+-*Grafica* [**Clasa care contine initializarile interfetei grafice**]  
+
+-*Buton Adaugare*  [**Clasa pentru adaugarea si actualizarea elementelor din listbox**]  
+
+-*Buton Stergere*  [**Clasa pentru stergerea si actualizarea elementelor din listbox**]  
+
+-*ListBox* [**Clasa pentru listbox-ul nostru**]  
+
+## "ninth" - Modificare fisier README.md pentru versiunea finala a primei prezentari
+
